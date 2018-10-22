@@ -7,7 +7,9 @@ public class movement2 : MonoBehaviour {
     public float Speed = 5f;
     public float JumpHeight = 0;
     //public float maxJumpHeight = 3f;
-   
+
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
 
     private Rigidbody2D _body;
     private Vector2 _inputs = Vector2.zero;
@@ -62,6 +64,10 @@ public class movement2 : MonoBehaviour {
             _inputs.x = -Speed;
  
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Fire();
+        }
         JumpData();
     }
 
@@ -83,6 +89,31 @@ public class movement2 : MonoBehaviour {
             JumpHeight = 0;
             spaceKeyDown = false;
         }
+    }
+
+    void Fire()
+    {
+        var bullet = (GameObject)Instantiate(
+            bulletPrefab,
+            bulletSpawn.position,
+            bulletSpawn.rotation);
+
+        if (Input.GetAxis("Horizontal") > 0f)
+        {
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.right * 200;
+
+        }
+        if (Input.GetAxis("Horizontal") < 0f)
+        {
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.right * -200;
+
+        }
+        else
+        {
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.right * 200;
+        }
+        
+        Destroy(bullet, 100f);
     }
 
 
