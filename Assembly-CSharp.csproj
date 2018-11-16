@@ -61,8 +61,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\movement2.cs" />
-    <Compile Include="Assets\movementScript.cs" />
+    <Compile Include="Assets\Script\EnemyWalking.cs" />
+    <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\LookAt.cs" />
+    <Compile Include="Assets\Script\movement2.cs" />
+    <Compile Include="Assets\Script\movementScript.cs" />
+    <Compile Include="Assets\Script\Spikes.cs" />
+    <Compile Include="Assets\Script\SwitchToggle.cs" />
+    <Compile Include="Assets\Script\TakeDamage.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/jules/Documents/GitHub/bubba3.0/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

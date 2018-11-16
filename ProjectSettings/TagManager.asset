@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+  - Enemy
+  - Spike
   layers:
   - Default
   - TransparentFX
@@ -50,4 +52,13 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 159029155
+    locked: 0
+  - name: Enviroment
+    uniqueID: 1380235441
+    locked: 0
+  - name: Enemy
+    uniqueID: 1757054949
+    locked: 0
+  - name: Spike
+    uniqueID: 464926831
     locked: 0
